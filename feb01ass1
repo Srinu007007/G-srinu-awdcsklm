@@ -1,0 +1,61 @@
+//G srinu awdcsklm assignement-1 
+#include<stdio.h>
+int n=2;
+void addmatrix(int a[n][n],int b[n][n]);
+void submatrix(int a[n][n],int b[n][n]);
+
+int main()
+{
+	int a[n][n];
+	int b[n][n];
+	int i,j;
+	printf("Enter A matrix");
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("Enter B matrix");
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
+	}
+	addmatrix(a,b);
+	submatrix(a,b);
+}
+
+void addmatrix(int a[n][n],int b[n][n])
+{
+	int c[n][n];
+	int i,j;
+	printf("Additon of two matrices:\n");
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			c[i][j]=a[i][j]+b[i][j];
+			printf("%d ",c[i][j]);
+		}
+		printf("\n");
+	}
+}
+void submatrix(int a[n][n],int b[n][n])
+{
+	int c[n][n];
+	int i,j;
+	printf("\nSubtraction of two matrices:\n");
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			c[i][j]=a[i][j]-b[i][j];
+			printf("%d ",c[i][j]);
+		}
+		printf("\n");
+	}
+}
