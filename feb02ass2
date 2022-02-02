@@ -1,0 +1,24 @@
+
+//G srinu awdcsklm assignmet2
+#include<stdio.h>
+ 
+  
+ int ft(int n)  ; 
+   
+int main()  
+{  
+  int n, f;  
+  printf("Enter a number: ");  
+  scanf("%d", &n);   
+   
+  f = ft(n);  
+  printf("Factorial is %d ", f);  
+  return 0;  
+} 
+int ft(int n)  
+{  
+  if (n != 0)  
+     return(n * ft(n-1));   
+  else  
+    return 1;
+}
