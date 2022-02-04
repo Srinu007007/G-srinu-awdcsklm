@@ -1,0 +1,28 @@
+//G srinu awdcsklm assingment-2
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char ch[100],copy[100],i,j;
+    printf("Enter a String");
+    gets(ch);
+    int len= strlen(ch);
+    //printf("%d",len);
+    
+    for(i=0;i<len;++i)
+    {
+        if((ch[i]>='a' && ch[i]<='z')||ch[i]==' ' )
+         copy[i]=toupper(ch[i]);
+         else if((ch[i]>='A' && ch[i]<='Z')||ch[i]==' ')
+         copy[i]=tolower(ch[i]);
+        
+    }
+     for(i=0;i<len;++i)
+     printf("%c",copy[i]);
+     
+    //puts(copy);
+    //puts(ch);
+
+    return 0;
+}
