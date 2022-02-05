@@ -1,0 +1,21 @@
+//G srinu awdcsklm assingment-2
+#include <stdio.h>
+#include <string.h>
+void  main()
+
+{
+   int i;
+   char ch[100],copy[100];
+   printf("Enter a String");
+gets(ch);
+strcpy(copy,ch);
+    //puts(copy);
+strrev(ch);
+//puts(ch);
+  
+   
+   if (strcmp(copy, ch) == 0)
+   printf("Given string palindrome");
+   else printf("Given string not palindrome");
+   
+}
