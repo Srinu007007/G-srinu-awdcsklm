@@ -1,0 +1,46 @@
+//G srinu awdcsklm assingment-1
+#include <stdio.h>
+#include <string.h>
+void  main()
+
+{
+   int cc=0,vc=0,nc=0,sc=0,i;
+   char ch[100];
+   printf("Enter a String");
+gets(ch);
+   int len=strlen(ch);
+   //printf("%d",len);
+   for(i=0;i<len;++i){
+       
+       if((ch[i]>='a'&& ch[i]<='z')|| (ch[i]>='A' && ch[i]<='Z')){
+	   
+	    switch(ch[i])
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    vc++;
+                    break;
+                    default: cc++;
+                
+            }
+        }
+        else if(ch[i]>='0' && ch[i]<='9')
+        nc++;
+        else 
+        sc++;
+    }
+   printf("NO.of vowels %d\n",vc);
+   printf("NO.of constants %d\n",cc);
+   printf("NO.of Symblos %d\n",sc);
+   printf("NO.of Numbers %d\n",nc);
+   
+   
+}
