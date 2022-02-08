@@ -1,0 +1,68 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include<stdio.h>
+struct Student{
+ int sid;
+ char sname[30];
+ int s1,s2,s3,s4,s5,tot,avg;
+};
+ void main()
+{
+  int n,i;
+printf("Enter no of record students");
+scanf("%d",&n);
+struct Student s[n];
+for (i=0;i<n;i++)
+{
+ printf("Enter %d student id",i+1);
+ scanf("%d",&s[i].sid);
+ printf("Enter %d student name",i+1);
+ scanf("%s", s[i].sname);
+ //gets(s[i].sname);
+ printf("Enter 5 subject marks");
+scanf("%d",&s[i].s1);
+scanf("%d",&s[i].s2);
+scanf("%d",&s[i].s3);
+scanf("%d",&s[i].s4);
+scanf("%d",&s[i].s5);
+s[i].tot=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
+s[i].avg=s[i].tot/5;
+}
+printf("\n\n**************************************Results****************************************\n");
+for(i=0;i<n;++i)
+{
+printf("student id %d\n",s[i].sid);
+printf("student name %s\n",s[i].sname);
+printf("student marks %d\n",s[i].tot);
+printf("student Percentage  %d\n",s[i].avg);
+printf("\n\n");
+}
+
+for(i=0;i<n;++i)
+{
+ if(s[i].avg>=90)
+    printf("Grade A");
+else
+   if(s[i].avg>=80)
+   printf("Grade B");
+else
+   if(s[i].avg>=70)
+   printf("Grade C");
+else
+   if(s[i].avg>=60)
+   printf("Grade D");
+else
+   if(s[i].avg>=40)
+   printf("Grade E");
+else
+   if(s[i].avg<40)
+   printf("Grade F");
+
+}
+
+}
