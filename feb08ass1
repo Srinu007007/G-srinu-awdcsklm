@@ -1,0 +1,42 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//G. Srinu awdcsklm ass-1
+#include <stdio.h>
+
+int main()
+{
+    int n,i,temp;
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;++i)
+    scanf("%d",&arr[i]);
+    int left=0,right=n-1;
+    while(left<right){
+        if(arr[left]%2!=0){
+            left++;
+        }
+        if(arr[right]%2==0){
+            right--;
+        }
+        if(left<right){
+        temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+            left++;
+            right--;
+        }
+    
+    }
+    
+    for(i=0;i<n;++i)
+    printf("%d ",arr[i] );
+    
+
+    return 0;
+}
