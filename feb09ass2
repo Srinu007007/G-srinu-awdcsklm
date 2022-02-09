@@ -1,0 +1,23 @@
+
+//G srinu awdcsklm assigment -2
+
+#include<stdio.h>
+void main(){
+	int n,i,k,sum=0;
+	int *p;
+	printf("enter a n elements:");
+	scanf("%d",&n);
+	int arr[n];
+	p=&arr;
+	for(i=0;i<n;++i)
+	scanf("%d",&arr[i]);
+	
+	for(i=0;i<n;++i)
+	{
+	 k=*(p+i);
+	 sum = sum+k;
+	 }
+	 printf("Sum is %d : ",sum);
+}
+	
+	
