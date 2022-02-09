@@ -1,0 +1,31 @@
+//G srinu awdcsklm assignment-1
+
+#include<stdio.h>
+void main(){
+	int a=5;
+	int *p,*p1,*add,*sub;
+	p=&a;
+	p1=&a;
+	add=&a;
+	sub=&a;
+	printf("pointer values before inc %u",p);
+	p++;
+	printf("\n pointer value after inc %u",p);
+	
+
+	printf("\n\npointer values before dec %u",p1);
+	--p1;
+	printf("\npointer values after dec %u",p1);
+	
+	
+	printf("\n\npointer values before adding pointer address value: %u",add);
+	add=add+3;
+	printf("\npointer values after adding pointer address values: %u",add);
+
+
+    printf("\n\npointer values before substract pointer address value: %u",sub);
+	sub=sub-3;
+	printf("\npointer values after substract pointer address values: %u",sub);		
+	
+	
+}
