@@ -1,0 +1,21 @@
+//G srinu awdcsklm assignment -2 
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main(){
+	FILE *f;
+	char filename[40],c;
+	int n,len;
+	
+	printf("Enter filename");
+	gets(filename);
+	f=fopen(filename,"r");
+	c=fgetc(f);
+	while(c!=EOF){
+		printf("%c",c);
+		c=fgetc(f);
+	}
+	fclose(f);
+	return(0);
+	
+}
