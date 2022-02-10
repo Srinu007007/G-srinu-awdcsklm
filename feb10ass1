@@ -1,0 +1,28 @@
+//G srinu awdcsklm assignment-1
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+	FILE *f;
+	int i,n;
+	char ch[1000],c;
+	char filename[40];
+	printf("Enter a file name");
+	gets(filename);
+	f=fopen(filename,"w");
+	printf("Enter a data");
+	gets(ch);
+	n=strlen(ch);
+	
+	
+	for(i=0;i<n;++i){
+		c=ch[i];
+		fputc(c,f);
+		
+	}
+	printf("file created");
+	fclose(f);
+	return 0;
+	
+}
